@@ -1,0 +1,3 @@
+[submodule "supra_examples/lib/forge-std"]
+	path = supra_examples/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
