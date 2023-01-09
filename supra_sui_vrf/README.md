@@ -186,7 +186,11 @@ module example::ExampleContract {
 
 To call rng_request function as below formate :
 ```cmd
-sui client call --package {package_id} --module ExampleContract --function rng_request --gas-budget 9000 --args {object_id} {package_id} {supra_config_obj} 1 0
+sui client call --package {package_id} --module ExampleContract --function rng_request --gas-budget 9000 --args {object_id} {package_id} {supra_config_obj} {u8:rng_count} {u64:client_seed}
 ```
 
-`supra_config_obj = 0x4c902d87c40a2f15c32227bbb63673b484c5fc8e` // it's keep updating till we deploye on testnet
+```cmd
+sui client call --package 0x1 --module ExampleContract --function rng_request --gas-budget 9000 --args 0x2 0x1 0x4c902d87c40a2f15c32227bbb63673b484c5fc8e 1 0
+```
+
+`supra_config_obj = 0x4c902d87c40a2f15c32227bbb63673b484c5fc8e`
