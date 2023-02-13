@@ -1,0 +1,10 @@
+[package]
+name = 'example'
+version = '1.0.0'
+
+[addresses]
+example = 'ad9e071a711c5ae692a464b376c513af3af1a4599436b6d15885888be1cc4478'
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "6996b6ddf9b8ab96cb9843e420ea6a791ea6bd9e" }
+supraContract = { local = './../vrf-framework' }
