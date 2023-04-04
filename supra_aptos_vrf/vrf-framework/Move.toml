@@ -1,0 +1,9 @@
+[package]
+name = 'supraContract'
+version = '1.0.0'
+
+[addresses]
+supra = "36b67d62112127f2125f2f2820ccaed685242ea3f7f50bc12ab66c980da69288"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "6996b6ddf9b8ab96cb9843e420ea6a791ea6bd9e" }
