@@ -1,0 +1,17 @@
+[package]
+name = 'Example'
+version = '1.0.0'
+
+[dependencies.SupraFramework]
+git = 'https://github.com/Entropy-Foundation/aptos-core.git'
+subdir = 'aptos-move/framework/supra-framework'
+rev = 'aptosvm-v1.16_supra-v0.4.0'
+
+[dependencies.SupraVrf]
+git = "https://github.com/Entropy-Foundation/vrf-interface"
+subdir = "supra/testnet"
+rev = "testnet"
+
+[addresses]
+example = "0x29204df02448bc9cc07557fd04018ce211ee23a9daf69b2224cff9b4297798af"
+
