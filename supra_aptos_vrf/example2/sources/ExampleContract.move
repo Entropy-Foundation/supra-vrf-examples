@@ -5,9 +5,9 @@ module example::example {
     use std::string;
 
     use aptos_std::table;
-    use supra_framework::account;
-    use supra_framework::account::SignerCapability;
-    use supra_framework::supra_account;
+    use aptos_framework::account;
+    use aptos_framework::account::SignerCapability;
+    use aptos_framework::aptos_account;
     use supra_addr::supra_vrf;
     use supra_addr::deposit;
 
@@ -20,7 +20,7 @@ module example::example {
 
     /// Generated new random number will be store here
     struct RandomNumberList has key {
-        random_numbers: table::Table<u64, vector<u256>>
+        random_numbers: table::Table<u64, vector<u64>>
     }
 
     /// Init function which is auto run at the time of contract deployment at once
@@ -50,7 +50,7 @@ module example::example {
         let resource_signer = account::create_signer_with_capability(&resource_signer_cap.signer_cap);
         let resource_address = get_resource_address();
         // First I need to transfer amount to resource account, and the then from this wallet I will transfer it to supra deposit fund
-        supra_account::transfer(sender, resource_address, amount);
+        aptos_account::transfer(sender, resource_address, amount);
         deposit::deposit_fund(&resource_signer, amount);
     }
 
@@ -91,7 +91,7 @@ module example::example {
         rng_count: u8,
         client_seed: u64,
     ) acquires RandomNumberList {
-        let verified_num: vector<u256> = supra_vrf::verify_callback(
+        let verified_num: vector<u64> = supra_vrf::verify_callback(
             nonce,
             message,
             signature,
@@ -106,7 +106,7 @@ module example::example {
 
     #[view]
     /// Get generated random number
-    public fun get_rng_number_from_nonce(nonce: u64): vector<u256> acquires RandomNumberList {
+    public fun get_rng_number_from_nonce(nonce: u64): vector<u64> acquires RandomNumberList {
         let random_num_list = borrow_global<RandomNumberList>(@example);
         *table::borrow(&random_num_list.random_numbers, nonce)
     }
