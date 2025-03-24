@@ -5,7 +5,7 @@ version = '1.0.0'
 [dependencies.SupraFramework]
 git = 'https://github.com/Entropy-Foundation/aptos-core.git'
 subdir = 'aptos-move/framework/supra-framework'
-rev = 'devnet'
+rev = 'dev'
 
 [dependencies.SupraVrf]
 git = "https://github.com/Entropy-Foundation/vrf-interface"
