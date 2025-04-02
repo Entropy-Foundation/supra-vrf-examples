@@ -15,4 +15,3 @@ rev = "testnet"
 
 [addresses]
 example = "0x1c5acf62be507c27a7788a661b546224d806246765ff2695efece60194c6df05"
-supra_addr = "0x186ba2ba88f4a14ca51f6ce42702c7ebdf6bfcf738d897cc98b986ded6f1219e"
