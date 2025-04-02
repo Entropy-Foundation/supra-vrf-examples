@@ -12,6 +12,5 @@ git = "https://github.com/Entropy-Foundation/vrf-interface"
 subdir = "supra/testnet"
 rev = "testnet"  
 
-
 [addresses]
 example = "0x1c5acf62be507c27a7788a661b546224d806246765ff2695efece60194c6df05"
