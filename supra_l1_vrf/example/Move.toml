@@ -3,9 +3,9 @@ name = 'Example'
 version = '1.0.0'
 
 [dependencies.SupraFramework]
-git = 'https://github.com/Entropy-Foundation/aptos-core.git'
-subdir = 'aptos-move/framework/supra-framework'
-rev = 'devnet'
+git = "https://github.com/Entropy-Foundation/aptos-core.git"
+rev = "dev"
+subdir = "aptos-move/framework/supra-framework"
 
 [dependencies.SupraVrf]
 git = "https://github.com/Entropy-Foundation/vrf-interface"
@@ -13,5 +13,4 @@ subdir = "supra/testnet"
 rev = "testnet"
 
 [addresses]
-example = "0x29204df02448bc9cc07557fd04018ce211ee23a9daf69b2224cff9b4297798af"
-
+example = "0x1c5acf62be507c27a7788a661b546224d806246765ff2695efece60194c6df05"
